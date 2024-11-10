@@ -1,0 +1,381 @@
+:root {
+  --primary : #b6895b;
+  --bg: #010101;
+  --second: #ffff;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  text-decoration: none;
+  font-family: 'poppins', sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  scroll-behavior: smooth;
+  border: none;
+}
+
+body {
+  background-color: var(--bg);
+  margin: 0;
+  padding: 0;
+  color: var(--second);
+}
+
+/*================================ Header ======================================*/
+header {
+  display: block;
+  margin: 0;
+  height: 75vh;
+  background-image: url(/img/jordan-whitfield-PaH1S6eY0Lw-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  position: relative;
+}
+
+header::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(1, 1, 3, 1) 2%, rgba(225, 225, 225, 0) 50%);
+}
+
+header .judul {
+  text-align: center;
+  padding: 13rem 7%;
+}
+
+header .judul h1 {
+  color: #ffffff;
+  font-size: 4rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+header .judul span {
+  color: var(--primary);
+}
+
+header .judul p {
+  font-size: 1rem;
+  color: var(--second);
+  mix-blend-mode: difference;
+}
+
+
+/*================================ Navbar ======================================*/
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 9999;
+  display: block;
+  align-items: center;
+  background-color: transparent;
+  backdrop-filter: blur(20px);
+  height: 4rem;
+}
+
+.navbar .navbar-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 25% 1.4rem 25%;
+}
+
+.navbar .navbar-item a {
+  color: #ffffff;
+  font-size: 1.4rem;
+}
+
+.navbar a:hover {
+  color: var(--primary);
+}
+
+.navbar a::after {
+  content: "";
+  display: block;
+  border-bottom: 1px solid var(--primary);
+  padding-bottom: 0.3rem;
+  transform: scaleX(0);
+  transition: 0.2s;
+}
+
+.navbar a:hover::after {
+  transform: scaleX(0.5);
+}
+
+
+/*================================ About ======================================*/
+.tentang-kami {
+  height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(/img/mike-kenneally-tNALoIZhqVM-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  padding-top: 6rem;
+}
+
+.tentang-kami::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 20%;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(225, 225, 225, 0) 90%);
+}
+
+.tentang-kami h2 {
+  color: var(--second);
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.tentang-kami h2 span {
+  color: var(--primary);
+}
+
+
+.tentang-kami .row-about {
+  display: flex;
+  padding: 2.5rem 7%;
+}
+
+.tentang-kami .row-about .img {
+  flex: 1 1 45rem;
+}
+
+.tentang-kami .row-about .img img {
+  width: 100%;
+  height: 24rem;
+  border-radius: 20px;
+  padding: 1.4rem 7%;
+}
+
+.tentang-kami .row-about .konten {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+
+}
+
+.tentang-kami .konten h3 {
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  color: var(--second);
+}
+
+.tentang-kami .row-about .konten p {
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.6;
+  color: var(--second);
+  text-align: justify;
+}
+
+
+/*================================ Menu ======================================*/
+.menu {
+  margin-top: 1.4rem;
+  padding-top: 6rem;
+}
+
+.menu h2, .kontak h2 {
+  text-align: center;
+  color: var(--second);
+  font-size: 2.5rem;
+}
+
+.menu h2 span, .kontak h2 span {
+  color: var(--primary);
+}
+
+.menu p {
+  text-align: center;
+  margin-bottom: 0.8rem;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.6;
+  color: var(--second);
+}
+
+.menu .row-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5rem 4rem;
+}
+
+.menu .row-menu .menu-card {
+  color: var(--second);
+  text-align: center;
+}
+
+.menu .row-menu .menu-card img {
+
+  border-radius: 50%;
+  width: 80%;
+}
+
+.menu .row-menu .menu-card .nama-kopi {
+  margin: 1rem auto 0.5rem;
+}
+
+.menu .row-menu p, .kontak p {
+  padding: 1.4rem 20%;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 100;
+  line-height: 1.6;
+  color: var(--second);
+}
+
+
+/*================================ kontak ======================================*/
+.kontak {
+  margin-top: 7rem;
+}
+
+.kontak .row-kontak form {
+  text-align: center;
+}
+
+.kontak .row-kontak form .form-group {
+  flex: 1 1 45rem;
+  text-align: center;
+  padding: 1.4rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.kontak .row-kontak form .form-group .data-group {
+  display: flex;
+  margin: 1rem;
+  margin-top: 1.4rem;
+  padding-left: 1.1rem;
+  align-items: center;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+  border-radius: 10px;
+}
+
+.kontak .row-kontak form .form-group .data-group input {
+  color: var(--second);
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.4rem;
+  background: none;
+  outline: none;
+}
+
+.kontak .row-kontak form .form-btn {
+  text-align: center;
+}
+
+.kontak .row-kontak form .form-btn .btn {
+  background-color: var(--primary);
+  padding: 1rem 7%;
+  border-radius: 6px;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+
+
+/*================================ Footer ======================================*/
+.footer {
+  background-color: #b6895b;
+  display: block;
+  margin-top: 4rem;
+  margin-bottom: 0;
+  height: 8rem;
+  text-align: center;
+  justify-items: center;
+  padding-bottom: 1.4rem;
+}
+
+.footer .row-foot {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  padding-top: 1rem;
+}
+
+.footer .row-foot a {
+  margin: 1rem;
+  color: #010101;
+}
+
+.footer .presented {
+  color: #010101;
+}
+
+
+/*=========================================== Query ====================================================*/
+
+/*================================ Laptop ======================================*/
+@media (max-width: 1366px) {
+  html{
+    font-size: 75%;
+  }
+
+  .tentang-kami .row-about .konten p, .menu p {
+    font-size: 1.2rem;
+  }
+  
+  header .judul p {
+    font-size: 1.6rem;
+  }
+
+
+/*================================ Tablet ======================================*/
+@media (max-width: 758px) {
+  html {
+    font-size: 62.5%;
+  }
+
+  header .judul p {
+    font-size: 1.6rem;
+  }
+
+  .tentang-kami .row-about {
+    flex-wrap: wrap;
+  }
+
+  .tentang-kami .row-about .img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .tentang-kami .row-about .konten h3 {
+    margin-top: 1rem;
+    font-size: 2.6rem;
+  }
+
+  .tentang-kami .row-about .konten {
+    padding: 0;
+  }
+
+  .tentang-kami .row-about .konten p, .menu p {
+    font-size: 1.2rem;
+  }
+
+
+}
+
+/*================================ Hp ======================================*/
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+
+}
